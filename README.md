@@ -1,9 +1,13 @@
 # Project Space Shooter Playtest
 
-Permanent web playtest URL:
+Permanent landing page (links to the newest build):
 
 https://rcv801.github.io/project-space-shooter-playtest/
 
-This repo is generated from the local Godot project by:
+Each deploy publishes a fresh, versioned build URL to defeat iOS/PWA caching:
 
-`./scripts/deploy_github_pages_playtest.sh`
+https://rcv801.github.io/project-space-shooter-playtest/<slug>-<timestamp>/
+
+Regenerate from the local Godot project with:
+
+`PSS_VERSION_SLUG=<slug> ./scripts/deploy_github_pages_playtest.sh`
