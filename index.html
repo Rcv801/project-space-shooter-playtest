@@ -144,7 +144,24 @@ html, body {
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 
-	</head>
+	<script>
+window.BUILD_VERSION = "self-updating-root-20260607150421";
+(function () {
+  try {
+    var params = new URLSearchParams(location.search);
+    fetch("latest-build.txt?_=" + Date.now(), { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.text() : ""; })
+      .then(function (latest) {
+        latest = (latest || "").trim();
+        if (latest && latest !== window.BUILD_VERSION && params.get("v") !== latest) {
+          location.replace(location.pathname + "?v=" + encodeURIComponent(latest));
+        }
+      })
+      .catch(function () {});
+  } catch (e) {}
+})();
+</script>
+</head>
 	<body>
 		<canvas id="canvas">
 			Your browser does not support the canvas tag.
@@ -160,9 +177,9 @@ html, body {
 			<div id="status-notice"></div>
 		</div>
 
-		<script src="index.js"></script>
+		<script src="index.self-updating-root-20260607150421.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":227104,"index.wasm":37695054},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index.self-updating-root-20260607150421","experimentalVK":false,"fileSizes":{"index.self-updating-root-20260607150421.pck":227104,"index.self-updating-root-20260607150421.wasm":37695054},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
