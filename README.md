@@ -1,10 +1,10 @@
 # Project Space Shooter Playtest
 
-Permanent landing page (links to the newest build):
+Permanent app URL (always overwritten with the newest build):
 
 https://rcv801.github.io/project-space-shooter-playtest/
 
-Each deploy publishes a fresh, versioned build URL to defeat iOS/PWA caching:
+Each deploy also publishes a fresh, versioned build URL for comparison/cache-busting:
 
 https://rcv801.github.io/project-space-shooter-playtest/<slug>-<timestamp>/
 
