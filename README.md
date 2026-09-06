@@ -1,13 +1,9 @@
 # Project Space Shooter Playtest
 
-Permanent app URL (always the newest build):
+[Play latest](https://rcv801.github.io/project-space-shooter-playtest/) · [Windows ZIP](https://rcv801.github.io/project-space-shooter-playtest/ProjectSpaceShooter-Windows.zip)
 
-https://rcv801.github.io/project-space-shooter-playtest/
+Latest build: drop-b-20260906210717-94ea67a
 
-Windows build (unsigned; SmartScreen: More info → Run anyway):
+[Archived matching build](https://rcv801.github.io/project-space-shooter-playtest/drop-b-20260906210717-94ea67a/), including its matching Windows ZIP.
 
-https://rcv801.github.io/project-space-shooter-playtest/ProjectSpaceShooter-Windows.zip
-
-Latest build id: `drop-a-20260906144730-324faff` (shown in the game's hangar too).
-
-Older builds stay reachable at `https://rcv801.github.io/project-space-shooter-playtest/<slug>-<timestamp>-<commit>/`.
+Build provenance and asset hashes are in each archive's provenance.json.

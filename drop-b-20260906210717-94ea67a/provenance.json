@@ -1,0 +1,78 @@
+{
+  "build_id": "drop-b-20260906210717-94ea67a",
+  "engine": "4.6.2.stable.official.71f334935",
+  "built_at_utc": "2026-09-06T21:07:47.849331+00:00",
+  "source_commit": "94ea67a6c50466a95802d3e8361f8e3586ea2d27",
+  "source_tree_sha256": "b98dbeaa4ec5bf12dce6d0321c1ad0df1bd1018529b342a0dd210da42ce783b0",
+  "source_dirty": false,
+  "files": {
+    "CREDITS.txt": {
+      "sha256": "462605a776cc261e4b1b58b77c87056116b6aac440271962776fcdedd1aecfbe",
+      "bytes": 1413
+    },
+    "ProjectSpaceShooter-Windows.zip": {
+      "sha256": "7b2f049f95f88c0a4ce4ebb1954d060e9755198ad4e9033615497c6957c66020",
+      "bytes": 49126156
+    },
+    "build-id.txt": {
+      "sha256": "6df54d0f4c1a395ad168b008f089fe31511d3f1c55e9a4e822180e96b778b3da",
+      "bytes": 30
+    },
+    "index.apple-touch-icon.png": {
+      "sha256": "93be8a71d65b45b77d3d8d22fb65fffe419c74d732d04f4d51829c59c9354e45",
+      "bytes": 26709
+    },
+    "index.audio.position.worklet.js": {
+      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
+      "bytes": 2973
+    },
+    "index.audio.worklet.js": {
+      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
+      "bytes": 7298
+    },
+    "index.html": {
+      "sha256": "eeff3111cbeff7640810bd9dc9d9d21d9020f69bd013aea992d2bd2b5104a1fd",
+      "bytes": 9062
+    },
+    "index.icon.png": {
+      "sha256": "2a2a689711c0835f2146e9b1bda501f6a3da73f6d22c439b585ea4f40e10b1c1",
+      "bytes": 192505
+    },
+    "index.js": {
+      "sha256": "e3f56ee40e6f84371053db06692cfac15e2c8659547b11c6b2dfa1996dabd981",
+      "bytes": 315759
+    },
+    "index.pck": {
+      "sha256": "d0e839e2721cf464fc3d7c8b87624e1a13a367ea85a667c706ec59a75d72a9fe",
+      "bytes": 14100432
+    },
+    "index.png": {
+      "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
+      "bytes": 21443
+    },
+    "index.wasm": {
+      "sha256": "cca8bc7c462d348aaa3f318aecf3281d99bf219e182256412711b24f0d086d80",
+      "bytes": 37695054
+    },
+    "licenses/godot-COPYRIGHT.txt": {
+      "sha256": "dc043a7dbf69632560219e72fbc61ef9fa7338c7a773660acd81b51590b69104",
+      "bytes": 99790
+    },
+    "licenses/godot-LICENSE.txt": {
+      "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80",
+      "bytes": 1149
+    },
+    "licenses/orbitron-OFL.txt": {
+      "sha256": "ab609b0e110d622435ff337cdf233288556e011bbf9bd0550be98846c0630819",
+      "bytes": 4426
+    },
+    "licenses/rajdhani-OFL.txt": {
+      "sha256": "f62ef357d3a1c3d27edd35a6e1ba350e8a8d13499797964eeadefbf0b3b15d1f",
+      "bytes": 4373
+    },
+    "manifest.webmanifest": {
+      "sha256": "4f47392a920759fa2d52ba83c83c99bbe69ec9ae4e1e54c3b298b8b8dce8263c",
+      "bytes": 436
+    }
+  }
+}
