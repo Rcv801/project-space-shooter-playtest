@@ -1,0 +1,25 @@
+PROJECT SPACE SHOOTER — CREDITS AND NOTICES
+
+Game project: BraskyCorp / Ryan. See project history for development credits.
+
+Engine: Godot Engine 4.6.2, MIT license. Godot and bundled engine dependency
+notices are included in licenses/godot-LICENSE.txt and godot-COPYRIGHT.txt.
+Source: https://github.com/godotengine/godot/tree/4.6.2-stable
+
+Fonts (identified from the actual bundled font name tables):
+Orbitron Bold 2.001 — Copyright 2018 The Orbitron Project Authors
+(https://github.com/theleagueof/orbitron), reserved font name Orbitron.
+Rajdhani Medium and SemiBold 1.201 — Copyright (c) 2014 Indian Type Foundry
+(info@indiantypefoundry.com); designers Satya Rajpurohit and Jyotish Sonowal.
+Both families use the SIL Open Font License 1.1. Full notices are included
+in licenses/orbitron-OFL.txt and licenses/rajdhani-OFL.txt, obtained from:
+https://github.com/google/fonts/tree/main/ofl/orbitron
+https://github.com/google/fonts/tree/main/ofl/rajdhani
+
+Audio: Original procedural synthesis and composition in
+scripts/audio/generate_audio.py. Current assets contain no third-party samples
+or ElevenLabs-generated recordings. See assets/audio/REPORT.md for provenance.
+
+Art: The project's existing generated art is catalogued in assets/art/manifest.json.
+This notice inventories the project; it does not establish rights beyond the
+recorded provenance or replace any separately applicable generation terms.
