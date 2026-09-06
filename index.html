@@ -53,23 +53,24 @@ html, body {
 	touch-action: none;
 }
 
-#ios-fullscreen-hint {
+#ios-fullscreen-hint, #windows-link {
 	position: fixed;
-	top: calc(10px + env(safe-area-inset-top));
-	right: calc(10px + env(safe-area-inset-right));
 	z-index: 1000;
-	max-width: 310px;
-	padding: 10px 12px;
+	padding: 8px 12px;
 	border: 1px solid rgba(120, 235, 255, 0.55);
 	border-radius: 12px;
 	background: rgba(0, 8, 18, 0.76);
 	color: #dffbff;
 	font: 600 13px/1.25 system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 	box-shadow: 0 0 24px rgba(0, 190, 255, 0.24);
+	text-decoration: none;
 }
+#ios-fullscreen-hint { top: calc(10px + env(safe-area-inset-top)); right: calc(10px + env(safe-area-inset-right)); max-width: 310px; }
+#windows-link { bottom: 10px; left: 10px; opacity: 0.75; }
+#windows-link:hover { opacity: 1; }
 
 @media (display-mode: fullscreen), (display-mode: standalone) {
-	#ios-fullscreen-hint { display: none; }
+	#ios-fullscreen-hint, #windows-link { display: none; }
 }
 
 
@@ -89,7 +90,7 @@ html, body {
 }
 
 #status {
-	background-color: #242424;
+	background-color: #03060d;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -145,7 +146,7 @@ html, body {
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 
 	<script>
-window.BUILD_VERSION = "menu-scale-20260611001052";
+window.BUILD_VERSION = "drop-a-20260906144730-324faff";
 (function () {
   try {
     var params = new URLSearchParams(location.search);
@@ -177,9 +178,9 @@ window.BUILD_VERSION = "menu-scale-20260611001052";
 			<div id="status-notice"></div>
 		</div>
 
-		<script src="index.menu-scale-20260611001052.js"></script>
+		<script src="index.drop-a-20260906144730-324faff.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index.menu-scale-20260611001052","experimentalVK":false,"fileSizes":{"index.menu-scale-20260611001052.pck":1126080,"index.menu-scale-20260611001052.wasm":37695054},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index.drop-a-20260906144730-324faff","experimentalVK":false,"fileSizes":{"index.drop-a-20260906144730-324faff.pck":12377880,"index.drop-a-20260906144730-324faff.wasm":37695054},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -290,7 +291,7 @@ const engine = new Engine(GODOT_CONFIG);
       window.matchMedia('(display-mode: standalone)').matches ||
       window.navigator.standalone === true;
   }
-
+  function isTouch() { return navigator.maxTouchPoints > 0 || 'ontouchstart' in window; }
   function ensureFullscreenHint() {
     if (isStandalone() || document.getElementById('ios-fullscreen-hint')) return;
     var isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
@@ -298,26 +299,32 @@ const engine = new Engine(GODOT_CONFIG);
     var hint = document.createElement('button');
     hint.id = 'ios-fullscreen-hint';
     hint.type = 'button';
-    hint.textContent = 'For closest fullscreen on iPhone/iPad: open in Safari → Share → Add to Home Screen.';
+    hint.textContent = 'Fullscreen on iPhone/iPad: Share → Add to Home Screen.';
     hint.addEventListener('click', function () { hint.remove(); focusGodotCanvas(); });
     document.body.appendChild(hint);
     setTimeout(function () { if (hint.parentNode) hint.remove(); }, 12000);
   }
-
+  function ensureWindowsLink() {
+    if (isTouch() || isStandalone() || document.getElementById('windows-link')) return;
+    var a = document.createElement('a');
+    a.id = 'windows-link';
+    a.href = 'ProjectSpaceShooter-Windows.zip';
+    a.textContent = 'Download Windows build (.zip)';
+    document.body.appendChild(a);
+  }
   function focusGodotCanvas() {
     var canvas = document.querySelector('canvas');
     if (!canvas) return;
     canvas.setAttribute('tabindex', '0');
     try { canvas.focus({ preventScroll: true }); } catch (e) { canvas.focus(); }
   }
-
   window.addEventListener('load', function () {
     ensureFullscreenHint();
+    ensureWindowsLink();
     focusGodotCanvas();
     setTimeout(focusGodotCanvas, 100);
     setTimeout(focusGodotCanvas, 1000);
   });
-
   ['pointerdown', 'touchstart', 'mousedown', 'click', 'keydown'].forEach(function (eventName) {
     window.addEventListener(eventName, focusGodotCanvas, { capture: true, passive: true });
   });

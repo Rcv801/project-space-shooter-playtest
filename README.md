@@ -1,13 +1,13 @@
 # Project Space Shooter Playtest
 
-Permanent app URL (always overwritten with the newest build):
+Permanent app URL (always the newest build):
 
 https://rcv801.github.io/project-space-shooter-playtest/
 
-Each deploy also publishes a fresh, versioned build URL for comparison/cache-busting:
+Windows build (unsigned; SmartScreen: More info → Run anyway):
 
-https://rcv801.github.io/project-space-shooter-playtest/<slug>-<timestamp>/
+https://rcv801.github.io/project-space-shooter-playtest/ProjectSpaceShooter-Windows.zip
 
-Regenerate from the local Godot project with:
+Latest build id: `drop-a-20260906144730-324faff` (shown in the game's hangar too).
 
-`PSS_VERSION_SLUG=<slug> ./scripts/deploy_github_pages_playtest.sh`
+Older builds stay reachable at `https://rcv801.github.io/project-space-shooter-playtest/<slug>-<timestamp>-<commit>/`.
